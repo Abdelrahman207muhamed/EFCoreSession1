@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFCoreSession1.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250907172337_AddPasswordColoumnInEmployee")]
-    partial class AddPasswordColoumnInEmployee
+    [Migration("20250909130631_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

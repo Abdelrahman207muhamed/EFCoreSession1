@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EFCoreSession1.Entities
 {
-
+    //EF Core Support 4 Ways For Mapping Classes In Database: [Table, View ,Function] 
     //Entity
     //POCO :
     //Plan Old CLR Object

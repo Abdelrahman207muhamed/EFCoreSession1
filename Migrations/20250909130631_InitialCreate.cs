@@ -6,14 +6,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace EFCoreSession1.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreation : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.EnsureSchema(
-                name: "dbo");
-
             migrationBuilder.CreateTable(
                 name: "Departments",
                 columns: table => new
@@ -29,8 +26,7 @@ namespace EFCoreSession1.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Hamada",
-                schema: "dbo",
+                name: "Employees",
                 columns: table => new
                 {
                     EmpId = table.Column<int>(type: "int", nullable: false),
@@ -38,11 +34,12 @@ namespace EFCoreSession1.Migrations
                     Age = table.Column<int>(type: "int", nullable: true),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Salary = table.Column<decimal>(type: "money", nullable: false)
+                    Salary = table.Column<decimal>(type: "money", nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Hamada", x => x.EmpId);
+                    table.PrimaryKey("PK_Employees", x => x.EmpId);
                 });
         }
 
@@ -53,8 +50,7 @@ namespace EFCoreSession1.Migrations
                 name: "Departments");
 
             migrationBuilder.DropTable(
-                name: "Hamada",
-                schema: "dbo");
+                name: "Employees");
         }
     }
 }

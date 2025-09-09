@@ -10,6 +10,7 @@ namespace EFCoreSession1
 
             AppDbContext context=new AppDbContext();
            // context.Database.Migrate();
+          
         }
     }
 }
